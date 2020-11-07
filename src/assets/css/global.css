@@ -23,3 +23,7 @@ body,
 .el-pagination {
   margin-top: 15px;
 }
+/* 解决级联过长 */
+.el-cascader-menu {
+  height: 300px;
+}
