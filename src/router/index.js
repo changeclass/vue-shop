@@ -45,6 +45,8 @@ const GoodList = () =>
   import(/* webpackChunkName:"GoodList_Add" */ '../components/goods/List.vue')
 const Add = () =>
   import(/* webpackChunkName:"GoodList_Add" */ '../components/goods/Add.vue')
+const Edit = () =>
+  import(/* webpackChunkName:"GoodList_Add" */ '../components/goods/Edit.vue')
 const Order = () =>
   import(/* webpackChunkName:"Order_Report" */ '../components/order/order.vue')
 const Report = () =>
@@ -73,6 +75,7 @@ const routes = [
       { path: '/params', component: Params },
       { path: '/goods', component: GoodList },
       { path: '/goods/add', component: Add },
+      { path: '/goods/edit/:id', component: Edit, props: true },
       { path: '/orders', component: Order },
       { path: '/reports', component: Report }
     ]

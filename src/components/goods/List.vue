@@ -52,6 +52,7 @@
               size="mini"
               type="primary"
               icon="el-icon-edit"
+              @click="goEditPage(scope.row)"
             ></el-button>
             <el-button
               size="mini"
@@ -138,6 +139,11 @@ export default {
     },
     goAddPage () {
       this.$router.push('/goods/add')
+    },
+    goEditPage (row) {
+      this.$router.push({
+        path: '/goods/edit/' + row.goods_id
+      })
     }
   }
 }
